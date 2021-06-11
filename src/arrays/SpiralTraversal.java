@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Spiral {
+public class SpiralTraversal {
 
     public static List<Integer> spiralTraverse(int[][] array) {
         List<Integer> result = new ArrayList<>();
