@@ -25,6 +25,25 @@ public class FirstDuplicateValue {
         }
         return -1;
     }
+    
+    public int findDuplicate1(int[] array) {
+        // Find the intersection point of the two runners.
+        int tortoise = array[0];
+        int hare = array[0];
+        do {
+            tortoise = array[tortoise];
+            hare = array[array[hare]];
+        } while (tortoise != hare);
+
+        // Find the "entrance" to the cycle.
+        tortoise = array[0];
+        while (tortoise != hare) {
+            tortoise = array[tortoise];
+            hare = array[hare];
+        }
+
+        return hare;
+    }
 
     public static void main(String[] args) {
         int[] input = new int[]{2, 1, 5, 2, 3, 3, 4};
