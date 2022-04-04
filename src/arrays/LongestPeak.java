@@ -1,3 +1,5 @@
+package arrays;
+
 public class LongestPeak {
 
     public static int longestPeak(int[] array) {

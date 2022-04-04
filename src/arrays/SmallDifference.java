@@ -1,10 +1,11 @@
 package arrays;
 
 import java.util.Arrays;
-
+// two pointer concept
 public class SmallDifference {
 
     public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
+        //sort the arrays
         Arrays.sort(arrayOne);
         Arrays.sort(arrayTwo);
         int indexOne=0;

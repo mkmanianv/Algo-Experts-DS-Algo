@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.Arrays;
 
 public class ArrayOfProducts {
@@ -49,10 +51,27 @@ public class ArrayOfProducts {
         return products;
     }
 
+    public static int[] arrayOfProducts2(int[] array) {
+        int[] products = new int[array.length];
+
+        int leftRunningProduct = 1;
+        for (int i = 0; i < array.length; i++) {
+            products[i] = leftRunningProduct;
+            leftRunningProduct *= array[i];
+        }
+
+        int rightRunningProduct = 1;
+        for (int i = array.length-1; i >= 0; i--) {
+            products[i] *= rightRunningProduct;
+            rightRunningProduct *= array[i];
+        }
+        return products;
+    }
+
     public static void main(String[] args) {
 
         int[] input = new int[]{5, 1, 4, 2};
-        System.out.println(Arrays.toString(arrayOfProducts(input)));
-        System.out.println(Arrays.toString(arrayOfProducts1(input)));
+//        System.out.println(Arrays.toString(arrayOfProducts(input)));
+        System.out.println(Arrays.toString(arrayOfProducts2(input)));
     }
 }

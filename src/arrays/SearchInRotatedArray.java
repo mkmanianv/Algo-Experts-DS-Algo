@@ -1,3 +1,5 @@
+package arrays;
+
 public class SearchInRotatedArray {
     public static int search(int[] nums, int target) {
         if (nums.length == 1) {
